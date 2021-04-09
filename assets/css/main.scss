@@ -1,2 +1,4 @@
-@import "variables";
-@import "~normalize-scss/sass/normalize/import-now";
+@import "./hellpers/reset";
+@import "./hellpers/mixins";
+@import "./hellpers/variables";
+@import "./hellpers/hellpers";
