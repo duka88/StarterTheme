@@ -1,11 +1,12 @@
 {
-  "name": "DJ",
-  "version": "1.1.0",
+  "name": "dj",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --watch",
-    "build": "webpack",
+    "dev": "parcel assets/main.js --out-dir dist --public-url ./ ",
+    "prod": "parcel build assets/main.js --out-dir dist --public-url ./ ",
+    "svgopt": "svgo -f assets/svg/raw -o assets/svg/opt &&  svg-sprite-generate -d assets/svg/opt -o assets/svg/sprite.svg",
     "icons": "icon-font-generator assets/icons/*.svg -o assets/css/icons -n dj-icons -p dj-icons --normalize  --mono --height 250"
   },
   "repository": {
@@ -15,22 +16,15 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/duka88/starter/issues"
+    "url": "git+https://github.com/duka88/starter.git"
   },
-  "homepage": "https://github.com/duka88/starter#readme",
+  "homepage": "git+https://github.com/duka88/starter.git",
   "devDependencies": {
     "axios": "^0.21.1",
-    "css-loader": "^3.6.0",
-    "file-loader": "^6.2.0",
     "icon-font-generator": "^2.1.11",
-    "mini-css-extract-plugin": "^0.9.0",
-    "normalize-scss": "^7.0.1",
+    "parcel-bundler": "^1.12.5",
     "sass": "^1.32.8",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.3.0",
-    "swiper": "^6.5.0",
-    "video.js": "^7.12.0",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^2.3.0"
   }
 }

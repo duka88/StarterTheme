@@ -1,18 +1,31 @@
-
+@font-face {
+	font-family: 'Harabara';
+	src: url("../fonts/Harabara_Font_Family/Harabara 700.ttf") format("truetype");
+ }
 
 $white: #fff;
-$black: #121212;
+$black: #2E3143;
+$grey1: #F2F4F6;
+$grey2: #ECEDEE;
+$orange: #EF9B0A;
+$blue1: #C2CDD8;
+$blue2: #8199B2;
+$blue3: #4B6177;
+$blue4: #202E31;
+$red: red;
+
+$font-main: 'Poppins', sans-serif;
+$font-harabara: 'Harabara';
 
 
-$font-main: 'Montserrat', sans-serif;
-$font-second: 'Hanson-Bold', sans-serif;
 
 
 
 
-$mobileBig: 480px;
-$mobileHeight: 500px;
+$mobile: 500px;
 $tablet: 768px;
+$tabletBig: 1024px;
 $desktop: 1200px;
+$desktopMid: 1280px;
 $desktopBig: 1440px;
-$desktopExBig: 1600px;
+$desktopExBig: 1800px;
