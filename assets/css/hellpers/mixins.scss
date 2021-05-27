@@ -26,9 +26,26 @@
   align-items: $align;
 }
 
+@mixin flex-around($align) {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: $align;
+}
+
 @mixin max-width {
-  max-width: 1390px;
+  max-width: 1598px;
   padding: 0 15px;
+  margin: 0 auto;
+}
+@mixin max-width-small {
+  max-width: 1484px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+@mixin max-width-single {
+  max-width: 1330px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -67,23 +84,50 @@
   height: auto;
 }
 
-@mixin absolute-center {
-  position: absolute;
+@mixin absolute-center($postition) {
+  position: $postition;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-@mixin font-awesome($icon) {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+@mixin dj-icons($icon) {
+  font-family: "dj-icons"; 
   content: $icon;
-  position: absolute;
+  display: block;
 }
 
-@mixin dj-icons($icon) {
-  font-family: "dj-icons";
-  font-weight: 900;
-  content: $icon;
-  position: absolute;
+@mixin scrollbarX() {
+  overflow: auto;
+  width: 100%;
+  scrollbar-color: $orange #EDDFC6 ;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+  }
+  &::-webkit-scrollbar:vertical {
+    width: 4px;
+  }
+  &::-webkit-scrollbar:horizontal {
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: #EDDFC6;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $orange;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-button:end:increment {
+    display: block;
+    background: transparent;
+
+    @media screen and (min-width: $tablet + 1) {
+      width: calc(100% - (100% - 80px));
+    }
+  }
 }
